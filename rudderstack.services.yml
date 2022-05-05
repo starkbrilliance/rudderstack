@@ -1,0 +1,9 @@
+services:
+  rudderstack_client_calls:
+    class: Drupal\rudderstack\RudderstackClientCalls
+    arguments: ['@http_client', '@config.factory']
+  rudderstack_events_subscriber:
+    class: '\Drupal\rudderstack\EventSubscriber\ConfigEventsSubscriber'
+    arguments: ['@rudderstack_client_calls']
+    tags:
+      - { name: 'event_subscriber' }

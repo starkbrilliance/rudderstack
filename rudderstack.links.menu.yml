@@ -1,0 +1,5 @@
+rudderstack.admin_settings:
+  title: 'Rudderstack Configuration'
+  description: 'Configure Rudderstack module.'
+  route_name: rudderstack.admin_settings_form
+  parent: system.admin_config_services

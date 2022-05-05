@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains rudderstack.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rudderstack_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rudderstack module.
+    case 'help.page.rudderstack':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Rudderstack Integration') . '</p>';
+      return $output;
+
+    default:
+  }
+}
